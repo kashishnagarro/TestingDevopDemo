@@ -1,8 +1,0 @@
-D:\vm\TestingDevopDemo\GitTeamCityDemo\UnitTestProject\bin\Debug\UnitTestProject.dll
-D:\vm\TestingDevopDemo\GitTeamCityDemo\UnitTestProject\bin\Debug\UnitTestProject.pdb
-D:\vm\TestingDevopDemo\GitTeamCityDemo\UnitTestProject\bin\Debug\BusinessLayer.dll
-D:\vm\TestingDevopDemo\GitTeamCityDemo\UnitTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-D:\vm\TestingDevopDemo\GitTeamCityDemo\UnitTestProject\bin\Debug\BusinessLayer.pdb
-D:\vm\TestingDevopDemo\GitTeamCityDemo\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
-D:\vm\TestingDevopDemo\GitTeamCityDemo\UnitTestProject\obj\Debug\UnitTestProject.dll
-D:\vm\TestingDevopDemo\GitTeamCityDemo\UnitTestProject\obj\Debug\UnitTestProject.pdb
