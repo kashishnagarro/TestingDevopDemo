@@ -1,0 +1,5 @@
+D:\vm\TestingDevopDemo\GitTeamCityDemo\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\vm\TestingDevopDemo\GitTeamCityDemo\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\vm\TestingDevopDemo\GitTeamCityDemo\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+D:\vm\TestingDevopDemo\GitTeamCityDemo\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\vm\TestingDevopDemo\GitTeamCityDemo\BusinessLayer\obj\Debug\BusinessLayer.pdb
