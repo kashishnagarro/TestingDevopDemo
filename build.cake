@@ -1,4 +1,8 @@
+#tool "nuget:?package=OpenCover"
+
 var target = Argument("target", "Default");
+
+var variableThatStores_GitVersion_FullSemVer = "git version 2.10.2.windows.1";
 
 var directoriesToClean = new []{
     "./GitTeamCityDemo/GitTeamCityDemo/obj",
@@ -44,8 +48,32 @@ Task("IntegrationTest")
 	{
 		MSTest("./GitTeamCityDemo/IntegrationTest/bin/Debug/IntegrationTest.dll");
 	});
+
+Task("Create-Coverage")
+	.IsDependentOn("IntegrationTest")
+	.Does(() =>
+	{
+		OpenCover(tool => {
+		  tool.MSTest("./GitTeamCityDemo/UnitTestProject/bin/Debug/UnitTestProject.dll");
+		  },
+		  new FilePath("./coverage.xml"),
+		  new OpenCoverSettings()
+			.WithFilter("+[BusinessLayer]*"));
+	});
+	
+Task("Generate-Artifacts")
+	.IsDependentOn("Create-Coverage")
+	.Does(() =>
+	{
+		MSBuild("./GitTeamCityDemo/GitTeamCityDemo/GitTeamCityDemo.csproj", new MSBuildSettings()
+		  .WithProperty("DeployOnBuild", "true")
+		  .WithProperty("WebPublishMethod", "Package")
+		  .WithProperty("PackageAsSingleFile", "true")
+		  .WithProperty("SkipInvalidConfigurations", "true"));
+	});
+	
 	
 Task("Default")  
-    .IsDependentOn("IntegrationTest");
+    .IsDependentOn("Generate-Artifacts");
 
 RunTarget(target);
